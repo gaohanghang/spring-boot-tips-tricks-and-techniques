@@ -34,6 +34,7 @@ public class PaymentApplication {
 
     public static void main(String[] args) {
         //you can use -Dspring.profiles.active=dev when starting app instead of hardcoding it
+        //启动应用程序而不是硬编码时，可以使用-Dspring.profiles.active = dev
         System.setProperty(AbstractEnvironment.ACTIVE_PROFILES_PROPERTY_NAME, "dev");
 
         SpringApplication.run(PaymentApplication.class, args);
@@ -41,7 +42,9 @@ public class PaymentApplication {
 
 
     //this is instead of XML based config
+    //这不是基于XML的配置
     @Bean
+    // @ConditionalOnMissingBean注解作用在@bean定义上，它的作用就是在容器加载它作用的bean时，检查容器中是否存在目标类型（ConditionalOnMissingBean注解的value值）的bean了，如果存在这跳过原始bean的BeanDefinition加载动作。
     @ConditionalOnMissingBean
     CollectorRegistry collectorRegistry() {
         CollectorRegistry collectorRegistry = new CollectorRegistry();
@@ -56,6 +59,7 @@ public class PaymentApplication {
 
     static {
         //HACK Avoids duplicate metrics registration in case of Spring Boot dev-tools restarts
+        // HACK避免在Spring Boot dev-tools重启时重复的指标注册
         CollectorRegistry.defaultRegistry.clear();
     }
 

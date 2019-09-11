@@ -5,6 +5,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
+/**
+ * 使用Bean @Qualifier避免Bean的运行时冲突
+ */
 @Component
 public class AvoidRuntimeClash {
 

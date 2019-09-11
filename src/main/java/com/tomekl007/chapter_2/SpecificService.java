@@ -9,6 +9,7 @@ public class SpecificService {
 
   @Autowired
   // Inject fine-grained config for this specific service - easy to "mock" and test.
+  // 为此特定服务注入细粒度配置 - 易于“mock”和测试。
   public SpecificService(SpecificServiceSettings specificServiceSettings) {
     this.specificServiceSettings = specificServiceSettings;
   }

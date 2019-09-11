@@ -5,6 +5,10 @@ import com.tomekl007.chapter_3.domain.Payment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+/**
+ * 构造函数注入
+ * 使用构造函数注入的不可变字段。
+ */
 @Component
 public class ConstructorInjection {
 
