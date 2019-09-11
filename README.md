@@ -1,5 +1,8 @@
 # Spring-Boot-Tips-Tricks-and-Techniques
-Spring Boot: Tips, Tricks and Techniques [Video], published by Packt
+
+> Spring Boot: Tips, Tricks and Techniques [Video], published by Packt
+>
+> Spring Boot 提示，技巧和技术[视频]，由Packt出版
 
 ## 1 Spring依赖注入技巧
 
