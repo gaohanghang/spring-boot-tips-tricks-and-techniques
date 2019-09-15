@@ -22,6 +22,7 @@ public class RESTErrorHandlingController {
 
   private String getByUser(String userId) {
     // Simulate error
+    // 模拟错误
     throw new NotFoundException("Cannot get user by userId:" + userId);
   }
 

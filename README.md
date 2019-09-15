@@ -56,13 +56,69 @@ com.tomekl007.chapter_2.ConfigInheritance
 
 ### 避免从DB层泄漏实体到API - 介绍DTO
 
+com.tomekl007.chapter_3.domain.PaymentDto
+
+### 定义端点 - 在@GetMapping和@RequestMapping之间进行选择
+
+### 利用带有@RequestBody注释的Spring自动转换
+
+使用 @RequestBody 将 json 转换为对象
+
+### 实现将异常传播给调用者的API
+
+![](https://raw.githubusercontent.com/gaohanghang/images/master/img/20190915133311.png)
+
+### 创建使用REST播放的API - 将异常映射到HTTP代码
+
+将异常映射到正确的REST错误代码
+
+![](https://raw.githubusercontent.com/gaohanghang/images/master/img/20190915133831.png)
+
 ## 4 编写高性能的Spring Boot Starters
+
+### 创建一个扩展Spring Eco-System的Spring Boot Starter项目
+
+### 配置由我们的入门者管理的Spring Bean - 定义API
+
 
 ## 5 使用Spring Boot进行测试的技术更加维护
 
-## 6 设计弹性和容错性
+### 避免Spring Boot测试反模式：实时测试
+
+### 用完全成熟的集成测试取代实时测试
+
+### 使用MockMVC加速MVC测试
+
+![](https://raw.githubusercontent.com/gaohanghang/images/master/img/20190915135029.png)
+
+### 通过模拟安全上下文使测试安全性变得简单
+
+com.tomekl007.chapter_5.MVCControllerSecurityTest
+
+### 我们将仅选择所需的bean，以使您的测试更易于维护。
+
+## 6 设计Spring Boot和容错性
+
+### 为RestTemplate配置套接字和请求超时
+
+### 根据客户端微服务分离RestTemplates。
+
+### 用断路器逻辑防止故障
+
+### 在下游服务失败的情况下使用RetryTemplate重试
+
+com.tomekl007.chapter_6.retry.RetryTemplateConfiguration
 
 ## 7 让您的Spring应用程序可维护的技巧
 
+### 配置Spring记录以避免使用嘈杂的记录器
 
+log4j.properties
 
+### 使用Micrometer测量应用程序中使用的缓存，以避免内存泄漏。
+
+### 使用直方图控制端点响应时间
+
+### 通过Prometheus公开指标来构建围绕它们的监控
+
+![](https://raw.githubusercontent.com/gaohanghang/images/master/img/20190915142249.png)

@@ -48,6 +48,7 @@ public class MVCControllerTest {
   @Autowired
   private MockMvc mockMvc;
 
+  // 应该返回所有付款
   @Test
   public void shouldReturnAllPayments() throws Exception {
     //given
@@ -65,6 +66,7 @@ public class MVCControllerTest {
         .andReturn();
   }
 
+  // 应该返回创建付款的表格
   @Test
   public void shouldReturnFormForCreatingPayment() throws Exception {
     //when, then
@@ -82,6 +84,7 @@ public class MVCControllerTest {
         .andReturn();
   }
 
+  // 应该Post新的付款
   @Test
   public void shouldPostNewPayment() throws Exception {
     //given

@@ -22,9 +22,9 @@ public class RestTemplateConfiguration {
 
   public RequestConfig requestConfig(int connectionTimeout, int socketTimeout) {
     RequestConfig result = RequestConfig.custom()
-        .setConnectionRequestTimeout(1000)//how long wait for a connection from connection manager
-        .setConnectTimeout(connectionTimeout)//how long wait for establishing connection
-        .setSocketTimeout(socketTimeout)//how long wait between packets
+        .setConnectionRequestTimeout(1000)//how long wait for a connection from connection manager 等待连接管理器连接的时间
+        .setConnectTimeout(connectionTimeout)//how long wait for establishing connection 等待建立连接多长时间
+        .setSocketTimeout(socketTimeout)//how long wait between packets 包之间等待多长时间
         .build();
     return result;
   }
